@@ -1,0 +1,141 @@
+/* Estilos para el modo claro (predeterminado) */
+.chat-container {
+    width: 400px; 
+    height: 700px; 
+    border: 1px solid #ccc; /* Agrega un borde para separar el chat de otros elementos */
+    overflow-y: auto; /* Habilita el desplazamiento vertical */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chat-messages {
+    flex-grow: 1; /* Permite que el contenedor de mensajes crezca para llenar el espacio restante */
+    display: flex;
+    flex-direction: column-reverse; /* Coloca los mensajes en orden inverso */
+    align-items: flex-start; /* Alinea los mensajes a la izquierda */
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .user-message {
+    align-self: flex-end; /* Alinea los mensajes del usuario a la derecha */
+    background-color: #DCF8C6; /* Color de fondo para los mensajes del usuario en modo claro */
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 70%; /* Establece un ancho máximo para los mensajes del usuario */
+    word-wrap: break-word; /* Permite que las palabras largas se rompan y ajusten al ancho máximo */
+  }
+  
+  .other-message {
+    background-color: #EAEAEA; /* Color de fondo para los mensajes del otro usuario en modo claro */
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 70%; /* Establece un ancho máximo para los mensajes del otro usuario */
+    word-wrap: break-word; /* Permite que las palabras largas se rompan y ajusten al ancho máximo */
+  }
+  
+  /* Estilos para el modo oscuro */
+  @media (prefers-color-scheme: dark) {
+    .chat-container {
+      background-color: #121212; /* Fondo oscuro */
+      border-color: #555; /* Borde en modo oscuro */
+    }
+  
+    .chat-messages {
+      align-items: flex-end; /* Alinea los mensajes a la derecha en modo oscuro */
+    }
+  
+    .user-message {
+      background-color: #032b03; /* Color de fondo para mensajes de usuario en modo oscuro */
+      color: #fff; /* Texto claro en fondo oscuro */
+    }
+  
+    .other-message {
+      background-color: #444444; /* Color de fondo para mensajes de otros usuarios en modo oscuro */
+      color: #fff; /* Texto claro en fondo oscuro */
+    }
+  }
+  /* Estilos para el campo de entrada y el botón */
+  .chat-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #fff; /* Fondo blanco para el campo de entrada y el botón */
+    border-top: 1px solid #ccc; /* Borde superior */
+    position: sticky;
+    bottom: 0; /* Coloca el campo de entrada y el botón en la parte inferior */
+  }
+  
+/* Estilos para el contenedor del chat */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 700px; /* Establece una altura fija */
+    border: 1px solid #ccc;
+    overflow-y: auto;
+    
+    position: relative;
+  }
+  
+  /* Estilos para la cabecera del chat (nombre del grupo, avatar y botón) */
+  .chat-header {
+    display: flex;
+    /*** justify-content: space-between; */
+    align-items: center;
+    padding: 10px;
+    position: sticky;
+    top: 0; /* Coloca el encabezado en la parte superior */
+    background-color: #c74040; /* Fondo blanco para el encabezado */
+    z-index: 1;
+  }
+  
+  /* Estilos para el avatar del grupo */
+  .group-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+  }
+  
+  .group-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Estilos para el nombre del grupo */
+  .group-info h2 {
+    margin: 0;
+    text-align: right;
+    flex-grow: 1;
+  }
+  
+  /* Estilos para el icono a la derecha (por ejemplo, el icono de enviar) */
+  .icon-right {
+    margin-left: 10px;
+  }
+
+  .right-messages {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  /* Estilos para los mensajes a la izquierda */
+  .left-messages {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Estilos para centrar el contenido horizontal y verticalmente */
+.app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Esto centra el contenido verticalmente en toda la altura de la ventana */
+  }
+  
