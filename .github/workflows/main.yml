@@ -1,0 +1,11 @@
+name: Mi Primera Acción
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Imprimir un mensaje
+      run: echo "Hola, esta es mi primera acción en GitHub!"
